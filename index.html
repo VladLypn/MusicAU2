@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MusicAU | RPG Guitar Revolution</title>
+    <meta
+      name="description"
+      content="MusicAU is a competitive guitar RPG where real chords become attacks, shields, spells, and level progress."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=waitlist3">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="MusicAU home">
+        <img src="assets/musicau-purple-hero.png" alt="" class="brand-mark">
+        <span>MusicAU</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#gameplay">Gameplay</a>
+        <a href="#waitlist">Waitlist</a>
+        <a href="#loop">How it works</a>
+        <a href="#compete">Compete</a>
+        <a href="#research">Research</a>
+        <a href="#deck">Deck</a>
+      </nav>
+      <a class="header-action" href="#waitlist">Join waitlist</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-art"
+          src="assets/musicau-purple-hero.png"
+          alt="MusicAU purple mascot character"
+        >
+        <div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">RPG Guitar Revolution</p>
+          <h1 id="hero-title">MusicAU</h1>
+          <p class="hero-kicker">Play riffs. Beat monsters. Get better at guitar.</p>
+          <p class="hero-text">
+            A web-first game where your real guitar becomes the controller. The microphone
+            listens, recognizes chords, and turns practice into attacks, shields, spells,
+            boss fights, and player-versus-player challenges.
+          </p>
+          <div class="hero-actions" aria-label="Page shortcuts">
+            <a class="button primary" href="#gameplay">Watch gameplay</a>
+            <a class="button secondary" href="#compete">Challenge players</a>
+          </div>
+        </div>
+        <dl class="hero-stats reveal" aria-label="MusicAU highlights">
+          <div>
+            <dt>75%</dt>
+            <dd>would play chord battles</dd>
+          </div>
+          <div>
+            <dt>87%</dt>
+            <dd>would try a free or demo version</dd>
+          </div>
+          <div>
+            <dt>14-24</dt>
+            <dd>target beginner audience</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="gameplay section-shell" id="gameplay">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Gameplay prototype</p>
+          <h2>Real guitar input becomes real game action.</h2>
+          <p>
+            The prototype shows MusicAU as a playable RPG battle loop: listen, recognize,
+            react, reward. Players practice because winning the fight depends on clean
+            timing and confident chord changes.
+          </p>
+        </div>
+        <div class="video-stage reveal">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/video/musicau-gameplay.mov.png"
+            src="assets/video/musicau-gameplay.mov"
+          ></video>
+        </div>
+      </section>
+
+      <section class="waitlist section-band" id="waitlist" aria-labelledby="waitlist-title">
+        <div class="waitlist-panel reveal">
+          <div class="waitlist-copy">
+            <p class="eyebrow">Early access</p>
+            <h2 id="waitlist-title">Want Early Access?</h2>
+            <p>
+              If MusicAU helped you, join the waitlist and we'll let you know
+              the moment the full version launches.
+            </p>
+            <div class="waitlist-count" data-waitlist-count hidden>
+              <strong>0</strong>
+              <span>players already on the waitlist</span>
+            </div>
+          </div>
+
+          <div class="waitlist-form-shell" data-waitlist-shell>
+            <form class="waitlist-form" data-waitlist-form novalidate>
+              <div class="form-field">
+                <label for="waitlist-email">Email</label>
+                <input
+                  id="waitlist-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                  data-email-input
+                >
+                <small data-email-error></small>
+              </div>
+
+              <details class="optional-contact" data-contact-details>
+                <summary>Add another contact method (optional)</summary>
+                <div class="contact-methods" data-contact-methods>
+                  <div class="contact-row" data-contact-row>
+                    <label>
+                      <span>Method</span>
+                      <select name="contactType">
+                        <option value="discord">Discord username</option>
+                        <option value="phone">Phone number</option>
+                        <option value="reddit">Reddit username</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="x">X (Twitter)</option>
+                        <option value="other">Other contact method</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Contact</span>
+                      <input name="contactValue" type="text" placeholder="@musicau_player">
+                    </label>
+                  </div>
+                </div>
+                <button class="ghost-button" type="button" data-add-contact>Add contact</button>
+              </details>
+
+              <div class="form-field">
+                <label for="waitlist-source">How did you find us?</label>
+                <select id="waitlist-source" name="referralSource">
+                  <option value="">Select one (optional)</option>
+                  <option value="reddit">Reddit</option>
+                  <option value="friend">Friend</option>
+                  <option value="google">Google</option>
+                  <option value="discord">Discord</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="waitlist-feature">What feature are you most excited about?</label>
+                <textarea
+                  id="waitlist-feature"
+                  name="featureRequest"
+                  rows="4"
+                  placeholder="Chord battles, boss fights, famous songs..."
+                  maxlength="600"
+                ></textarea>
+              </div>
+
+              <label class="trap-field" aria-hidden="true">
+                Website
+                <input name="website" type="text" tabindex="-1" autocomplete="off">
+              </label>
+
+              <button class="waitlist-submit" type="submit" data-submit-button>
+                <span>Join the Waitlist</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <p class="privacy-note">
+                We'll only use your information to notify you about MusicAU. No spam.
+                <a href="#privacy">Privacy Policy</a>
+              </p>
+              <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="waitlist-success" data-waitlist-success hidden>
+              <span class="success-mark">OK</span>
+              <h3>You're on the list!</h3>
+              <p>
+                Thanks for your interest. We'll contact you as soon as MusicAU is ready.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="loop section-band" id="loop">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Every chord has a purpose.</h2>
+          <p>
+            MusicAU hides repetition inside a game loop. Instead of drilling the same
+            shape in isolation, players learn what each chord does and use it under
+            pressure.
+          </p>
+        </div>
+        <div class="action-grid">
+          <article class="action-card reveal">
+            <span class="chord">C</span>
+            <h3>Attack</h3>
+            <p>Strike enemies by landing the chord clearly.</p>
+          </article>
+          <article class="action-card reveal">
+            <span class="chord">Em</span>
+            <h3>Shield</h3>
+            <p>Defend during enemy turns with controlled timing.</p>
+          </article>
+          <article class="action-card reveal">
+            <span class="chord">Am</span>
+            <h3>Spell</h3>
+            <p>Cast abilities that reward accuracy and rhythm.</p>
+          </article>
+          <article class="action-card reveal">
+            <span class="chord">G/F</span>
+            <h3>Power</h3>
+            <p>Charge boss-fight moves through harder transitions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="compete section-shell" id="compete">
+        <div class="compete-layout">
+          <div class="compete-copy reveal">
+            <p class="eyebrow">Competitive practice</p>
+            <h2>Sharpen your guitar skills, then prove them.</h2>
+            <p>
+              MusicAU is more than a solo practice tool. Players can compete through
+              chord battles, score races, seasonal ladders, and boss challenges where
+              cleaner playing creates stronger moves.
+            </p>
+            <div class="mode-list" aria-label="Competitive modes">
+              <div>
+                <strong>Chord duels</strong>
+                <span>Two players trade attacks by matching chords under time pressure.</span>
+              </div>
+              <div>
+                <strong>Score races</strong>
+                <span>Accuracy, streaks, and speed decide the winner.</span>
+              </div>
+              <div>
+                <strong>Boss raids</strong>
+                <span>Players combine riffs and chord roles to beat larger enemies.</span>
+              </div>
+            </div>
+          </div>
+          <div class="battle-panel reveal" aria-label="Example battle scoreboard">
+            <div class="duel-top">
+              <span>Player 1</span>
+              <strong>1,840</strong>
+            </div>
+            <div class="duel-meter">
+              <span style="width: 72%"></span>
+            </div>
+            <div class="duel-action">
+              <span>Next chord</span>
+              <strong>Am</strong>
+              <small>Spell window open</small>
+            </div>
+            <div class="duel-meter alt">
+              <span style="width: 58%"></span>
+            </div>
+            <div class="duel-top">
+              <span>Player 2</span>
+              <strong>1,520</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="research section-band" id="research">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research proof</p>
+          <h2>Built around the beginner problems in the presentation.</h2>
+          <p>
+            The deck identifies expensive lessons, boring drills, invisible progress, and
+            delayed feedback as the barriers. MusicAU answers those with instant response,
+            visible progression, and multiplayer motivation.
+          </p>
+        </div>
+        <div class="proof-grid">
+          <article class="proof-card reveal">
+            <span>EUR50/hr</span>
+            <h3>Lesson cost barrier</h3>
+            <p>29% never start because cost makes guitar learning feel out of reach.</p>
+          </article>
+          <article class="proof-card reveal">
+            <span>47</span>
+            <h3>Questionnaire responses</h3>
+            <p>Early validation came from direct audience research.</p>
+          </article>
+          <article class="proof-card reveal">
+            <span>24K</span>
+            <h3>Reddit views</h3>
+            <p>The idea earned 54 comments from a public guitar-learning audience.</p>
+          </article>
+          <article class="proof-card reveal">
+            <span>63.8%</span>
+            <h3>Want progress</h3>
+            <p>Progress and achievements were the top motivation in the survey.</p>
+          </article>
+          <article class="proof-card reveal">
+            <span>59.6%</span>
+            <h3>Want famous songs</h3>
+            <p>Song-driven motivation can feed levels, quests, and future content.</p>
+          </article>
+          <article class="proof-card reveal">
+            <span>75%</span>
+            <h3>Would play chord battles</h3>
+            <p>35 of 47 respondents liked the core competitive chord-battle idea.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="market section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Audience and market</p>
+          <h2>For beginners who need momentum, feedback, and a reason to return.</h2>
+        </div>
+        <div class="market-layout">
+          <article class="persona-card reveal">
+            <h3>Core persona</h3>
+            <p>
+              A 17-year-old beginner and rock fan who struggles with chord transitions,
+              hates endless barre-chord repetition, and wants visible progress instead
+              of an infinite practice loop.
+            </p>
+          </article>
+          <div class="market-stats reveal" aria-label="Market scale from presentation">
+            <div>
+              <strong>~1M</strong>
+              <span>new guitarists every year</span>
+            </div>
+            <div>
+              <strong>~50M</strong>
+              <span>active guitar players</span>
+            </div>
+            <div>
+              <strong>~700M</strong>
+              <span>people play or have tried guitar</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deck section-band" id="deck">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Presentation</p>
+          <h2>Pitch deck moments.</h2>
+        </div>
+        <div class="slide-grid">
+          <figure class="slide-card reveal">
+            <img src="assets/slides/slide-01.png" alt="MusicAU title slide">
+            <figcaption>Identity and promise</figcaption>
+          </figure>
+          <figure class="slide-card reveal">
+            <img src="assets/slides/slide-10.png" alt="MusicAU chord action slide">
+            <figcaption>Chord actions</figcaption>
+          </figure>
+          <figure class="slide-card reveal">
+            <img src="assets/slides/slide-16.png" alt="MusicAU validation slide">
+            <figcaption>Survey validation</figcaption>
+          </figure>
+          <figure class="slide-card reveal">
+            <img src="assets/slides/slide-20.png" alt="MusicAU competitor slide">
+            <figcaption>Competitive position</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>MusicAU</span>
+      <span id="privacy">RPG Guitar Revolution - TLF 2026. Privacy Policy coming soon.</span>
+    </footer>
+
+    <script src="app.js?v=waitlist2"></script>
+  </body>
+</html>

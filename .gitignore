@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local waitlist data
+waitlist.db
+*.db-journal
+
+# Extracted presentation internals are not used by the landing page.
+assets/pptx/
