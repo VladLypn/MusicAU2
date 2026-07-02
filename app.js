@@ -49,9 +49,23 @@ const contactOptions = [
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
+const readableMessage = (value, fallback = "Something went wrong. Please try again.") => {
+  if (!value) return fallback;
+  if (typeof value === "string") return value;
+  if (value instanceof Error) return value.message || fallback;
+
+  if (typeof value === "object") {
+    if (typeof value.error === "string") return value.error;
+    if (typeof value.message === "string") return value.message;
+    if (typeof value.detail === "string") return value.detail;
+  }
+
+  return fallback;
+};
+
 const setMessage = (text = "", isError = true) => {
   if (!formMessage) return;
-  formMessage.textContent = text;
+  formMessage.textContent = readableMessage(text, "");
   formMessage.style.color = isError ? "var(--pink)" : "var(--green)";
 };
 
@@ -199,7 +213,7 @@ waitlistForm?.addEventListener("submit", async (event) => {
     const data = await response.json().catch(() => ({}));
 
     if (!response.ok) {
-      throw new Error(data.error || "Something went wrong. Please try again.");
+      throw new Error(readableMessage(data, "Something went wrong. Please try again."));
     }
 
     waitlistForm.hidden = true;
@@ -211,7 +225,7 @@ waitlistForm?.addEventListener("submit", async (event) => {
     showConfetti();
     refreshWaitlistCount();
   } catch (error) {
-    setMessage(error.message || "Something went wrong. Please try again.", true);
+    setMessage(readableMessage(error), true);
   } finally {
     setLoading(false);
   }
