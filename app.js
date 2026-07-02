@@ -145,7 +145,7 @@ const refreshWaitlistCount = async () => {
   if (!waitlistCount) return;
 
   try {
-    const response = await fetch("/api/waitlist/count", {
+    const response = await fetch("/api/waitlist", {
       headers: { Accept: "application/json" },
     });
 

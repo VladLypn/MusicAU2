@@ -207,7 +207,7 @@ class MusicAUHandler(SimpleHTTPRequestHandler):
 
   def do_GET(self):
     parsed = urlparse(self.path)
-    if parsed.path == "/api/waitlist/count":
+    if parsed.path in {"/api/waitlist", "/api/waitlist/count"}:
       self.send_json(HTTPStatus.OK, {"count": waitlist_count()})
       return
     return super().do_GET()
